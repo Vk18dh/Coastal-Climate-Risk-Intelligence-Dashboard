@@ -1,0 +1,167 @@
+project-root/
+├── .env.example
+├── .github
+│   ├── ISSUE_TEMPLATE
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── workflows
+├── .gitignore
+├── LICENSE
+├── Readme.md
+├── assets
+├── backend
+│   ├── app
+│   │   ├── ai
+│   │   │   ├── embeddings
+│   │   │   ├── llm
+│   │   │   ├── ocr
+│   │   │   ├── prompts
+│   │   │   ├── recommendation
+│   │   │   └── summarizer
+│   │   ├── analytics
+│   │   │   ├── correlation
+│   │   │   ├── forecast
+│   │   │   ├── statistics
+│   │   │   ├── timeseries
+│   │   │   └── visualization
+│   │   ├── api
+│   │   │   └── v1
+│   │   │       ├── ai
+│   │   │       ├── analytics
+│   │   │       ├── dashboard
+│   │   │       ├── health
+│   │   │       ├── regions
+│   │   │       ├── reports
+│   │   │       ├── risk
+│   │   │       ├── tides
+│   │   │       └── weather
+│   │   ├── climate_risk
+│   │   │   ├── calculations
+│   │   │   ├── classification
+│   │   │   ├── engine
+│   │   │   ├── models
+│   │   │   └── weights
+│   │   ├── config
+│   │   │   ├── constants.py
+│   │   │   ├── logging.py
+│   │   │   ├── security.py
+│   │   │   └── settings.py
+│   │   ├── core
+│   │   ├── database
+│   │   │   ├── base.py
+│   │   │   ├── connection.py
+│   │   │   ├── seed.py
+│   │   │   └── session.py
+│   │   ├── geospatial
+│   │   │   ├── heatmaps
+│   │   │   ├── layers
+│   │   │   ├── processing
+│   │   │   ├── spatial
+│   │   │   └── utils
+│   │   ├── middleware
+│   │   ├── models
+│   │   │   ├── analytics.py
+│   │   │   ├── region.py
+│   │   │   ├── report.py
+│   │   │   ├── risk.py
+│   │   │   ├── tide.py
+│   │   │   └── weather.py
+│   │   ├── repositories
+│   │   │   ├── analytics_repository.py
+│   │   │   ├── region_repository.py
+│   │   │   ├── report_repository.py
+│   │   │   ├── risk_repository.py
+│   │   │   ├── tide_repository.py
+│   │   │   └── weather_repository.py
+│   │   ├── schemas
+│   │   │   ├── analytics.py
+│   │   │   ├── common.py
+│   │   │   ├── dashboard.py
+│   │   │   ├── region.py
+│   │   │   ├── report.py
+│   │   │   ├── risk.py
+│   │   │   ├── tide.py
+│   │   │   └── weather.py
+│   │   ├── services
+│   │   │   ├── ai_service.py
+│   │   │   ├── analytics_service.py
+│   │   │   ├── dashboard_service.py
+│   │   │   ├── region_service.py
+│   │   │   ├── report_service.py
+│   │   │   ├── risk_service.py
+│   │   │   ├── tide_service.py
+│   │   │   └── weather_service.py
+│   │   ├── tasks
+│   │   └── utils
+│   ├── main.py
+│   ├── requirements.txt
+│   └── tests
+├── data
+│   ├── exports
+│   ├── gis
+│   ├── historical
+│   ├── processed
+│   ├── raw
+│   └── uploads
+├── docker
+├── docker-compose.yml
+├── docs
+│   ├── 01-PRD.md
+│   ├── 02-TRD.md
+│   ├── 03-APP_FLOW.md
+│   ├── 04-UI_UX_BRIEF.md
+│   ├── 05-BACKEND_SCHEMA.md
+│   ├── 06-IMPLEMENTATION_PLAN.md
+│   ├── API_SPECIFICATION.md
+│   ├── DATABASE_ERD.md
+│   └── README.md
+├── frontend
+│   ├── package.json
+│   ├── public
+│   ├── src
+│   │   ├── App.tsx
+│   │   ├── assets
+│   │   ├── components
+│   │   │   ├── ai
+│   │   │   ├── analytics
+│   │   │   ├── charts
+│   │   │   ├── common
+│   │   │   ├── dashboard
+│   │   │   ├── layout
+│   │   │   ├── maps
+│   │   │   ├── reports
+│   │   │   └── ui
+│   │   ├── config
+│   │   ├── constants
+│   │   ├── contexts
+│   │   ├── hooks
+│   │   ├── index.css
+│   │   ├── lib
+│   │   ├── main.tsx
+│   │   ├── pages
+│   │   │   ├── about
+│   │   │   ├── analytics
+│   │   │   ├── dashboard
+│   │   │   ├── reports
+│   │   │   └── risk
+│   │   ├── routes
+│   │   ├── services
+│   │   ├── store
+│   │   ├── styles
+│   │   ├── types
+│   │   ├── utils
+│   │   └── vite-env.d.ts
+│   ├── tsconfig.json
+│   └── vite.config.ts
+├── models
+├── package.json
+├── pyproject.toml
+├── requirements.txt
+├── scripts
+├── tests
+│   ├── backend
+│   ├── e2e
+│   ├── fixtures
+│   ├── frontend
+│   ├── integration
+│   └── performance
+└── tree_output.txt

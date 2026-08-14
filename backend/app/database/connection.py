@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from app.config.settings import settings
 from app.config.logging import logger
 
@@ -15,8 +15,9 @@ def check_db_connection() -> bool:
     """Verifies database connection availability."""
     try:
         with engine.connect() as conn:
-            conn.execute("SELECT 1")
+            conn.execute(text("SELECT 1"))
         return True
     except Exception as e:
         logger.warning(f"Database connection warning: {e}")
         return False
+

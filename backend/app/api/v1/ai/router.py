@@ -1,21 +1,18 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Query
+from app.services.ai_service import ai_service
 
 router = APIRouter(prefix="/ai-report", tags=["AI Intelligence"])
 
 
 @router.get("")
-async def get_ai_report():
+async def get_ai_report(region_id: int = Query(1, description="Region ID to generate AI report for")):
     """
     GET /api/v1/ai-report
-    Returns AI-generated executive summaries and advisories.
-    (Structural route boundary - Groq LLM integration deferred to Sprint 3)
+    Returns AI-generated executive summaries, key threats, and actionable advisories.
     """
+    data = ai_service.generate_ai_report(region_id)
     return {
         "success": True,
-        "message": "AI Advisory API endpoint registered. Groq LLM intelligence generation scheduled for Sprint 3.",
-        "data": {
-            "status": "route_registered",
-            "provider": "groq",
-            "module": "app.services.ai_service"
-        }
+        "message": f"AI Climate Advisory generated for region {region_id}.",
+        "data": data
     }

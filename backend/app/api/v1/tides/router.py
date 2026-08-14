@@ -1,21 +1,18 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Query
+from app.services.tide_service import tide_service
 
 router = APIRouter(prefix="/tides", tags=["Tides"])
 
 
 @router.get("")
-async def get_tides_data():
+async def get_tides_data(region_id: int = Query(1, description="Region ID to fetch tide data for")):
     """
     GET /api/v1/tides
-    Returns ocean tide and sea surface observations.
-    (Structural route boundary - Oceanographic data integration deferred to Sprint 2)
+    Returns ocean tide, wave height, sea surface temperature, and anomaly metrics.
     """
+    data = tide_service.get_tides_for_region(region_id)
     return {
         "success": True,
-        "message": "Tides API endpoint registered. Oceanographic data integration scheduled for Sprint 2.",
-        "data": {
-            "status": "route_registered",
-            "provider": "open-meteo-marine",
-            "module": "app.services.tide_service"
-        }
+        "message": f"Tide and ocean observations retrieved for region {region_id}.",
+        "data": data
     }

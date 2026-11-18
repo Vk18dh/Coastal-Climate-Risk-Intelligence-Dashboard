@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend/.venv/
+.pytest_cache/
+*.log
+
+# Node & Frontend
+node_modules/
+dist/
+*.tsbuildinfo
+frontend/vite.config.d.ts
+frontend/vite.config.js
+frontend/tsconfig.node.tsbuildinfo
+frontend/tsconfig.tsbuildinfo
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+

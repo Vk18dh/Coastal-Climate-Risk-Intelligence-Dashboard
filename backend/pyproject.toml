@@ -1,0 +1,19 @@
+[tool.pytest.ini_options]
+# Run all async tests automatically without requiring @pytest.mark.asyncio
+asyncio_mode = "auto"
+
+# Prevent future breaking change: pin fixture loop scope to "session"
+asyncio_default_fixture_loop_scope = "session"
+
+# Limit test discovery to the tests/ directory
+testpaths = ["tests"]
+
+# Show extra summary info on test failures
+addopts = "-v --tb=short"
+
+# Suppress known third-party cleanup warnings that are not test failures
+filterwarnings = [
+    "ignore::RuntimeWarning:asyncpg",
+    "ignore::DeprecationWarning:asyncpg",
+]
+

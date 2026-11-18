@@ -1,0 +1,5 @@
+{
+  "name": "coastal-climate-risk-root",
+  "private": true,
+  "description": "Root workspace marker. Frontend code is in ./frontend/, backend in ./backend/."
+}
